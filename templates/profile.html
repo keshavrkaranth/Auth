@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+</head>
+<body>
+{% include 'base.html' %}
+{% block content %}
+    <div class="container">
+    <div class="jumbotron">
+         <h2>Name:{{ details.first_name}} {{ details.last_name }}</h2>
+         <h2>Username:{{ details.username }}</h2>
+        <h2>Phone:{{ phno.phno }}</h2>
+        <h2>Email:{{ details.email }}</h2>
+
+        <a href="{% url 'authapp:logout' %}"><button class="btn btn-primary">Logout</button></a>
+
+
+    </div>
+    </div>
+
+{% endblock %}
+</body>
+</html>

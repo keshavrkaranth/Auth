@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+{% include 'base.html' %}
+{% block content %}
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                   <center><h2> Login Here</h2></center>
+                <hr>
+
+                    {% for message in messages %}
+                        <center><h2>{{ message }}</h2></center>
+                    {% endfor %}
+
+                       <center>
+                            <form method="post">
+                                {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-danger">Login</button>
+                        </form>
+                       </center>
+                        </div>
+            </div>
+        </div>
+    </div
+{% endblock %}
+
+</body>
+</html>

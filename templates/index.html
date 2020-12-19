@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{%  block content %}
+    <div class="container">
+        <div class="jumbotron">
+            <a href="{% url 'authapp:signup' %}"><button type="button" class="btn btn-primary">Signup</button><br><hr></a>
+            <a href="{% url 'authapp:login' %}"><button type="button" class="btn btn-success">Login</button></a>
+        </div>
+    </div>
+{% endblock %}
