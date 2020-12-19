@@ -25,7 +25,7 @@ def signup(request):
                 user.set_password(user.password)
                 user.save()
                 usermodel.objects.create(user=user,phno=form.cleaned_data['phone_no'])
-                messages.success(request,'User Sucesfully created')
+
                 form = RegistrationForm()
                 return redirect('authapp:login')
     else:
